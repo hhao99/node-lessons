@@ -4,10 +4,12 @@
 
 不久前公司刚发一台新 Mac 给我，所以我对于在新环境中安装 Node.js 的过程还是记忆犹新的。
 
+Windows 10下面现在可以使用 Windows Linux Subsystem，windows下面的ubuntu开发环境，需要windows 10 107 14393以上版本，也就是今年七月的周年更新版本。添加windows linux subsystem 特性， 重启系统系统以后输入bash命令，系统会提示下载相关的程序包，等待完成以后输入用户和密码，ubuntu 14.04可以使用了。
+
 其实这过程特别简单:
 
 ### 先安装一个 nvm（ https://github.com/creationix/nvm ）
-
+具体安装方法最好是打开github.com，看一看nvm最新的指南。
 ```
 $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.2/install.sh | bash
 ```
@@ -24,10 +26,15 @@ $ nvm
 
 ### 安装 Node.js
 
-使用 nvm 的命令安装 Node.js 最新稳定版，现在是 `v0.12.3`。
+使用 nvm 的命令安装 Node.js 最新稳定版，现在是 `v7.0.0';
+nodejs.org上面有最新的发行版的相关信息，下载可以寻找国内的镜像。
+
+淘宝开源镜像速度不错，需要通过
+export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
+指定镜像的地址，加速下载安装。
 
 ```
-$ nvm install 0.12
+$ nvm install v7.0.0
 ```
 
 安装完成后，查看一下
